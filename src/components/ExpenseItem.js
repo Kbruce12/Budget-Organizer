@@ -1,14 +1,17 @@
-function ExpenseItem () {
+import './ExpenseItem.css';
+import { useState } from 'react';
+
+function ExpenseItem (props) {
+
     return (
-        <div>
-            <h2>Date</h2>
-            <p>placeholder</p>
-            <h2>Item</h2>
-            <p>placeholder</p>
-            <h2>Price</h2>
-            <p>placeholder</p>
+        <div className='expense-item'>
+            <div>{props.date.toISOString()}</div>
+            <div className='expense-item__description'>
+                <h2>{props.title}</h2>
+                <div className='expense-item__price'>${props.amount}</div>
+            </div>
         </div>
-    )
+    );
 }
 
 export default ExpenseItem;
