@@ -1,8 +1,8 @@
 import './index.css';
-import ExpenseItem from './components/ExpenseItem';
+import Expenses from './components/Expenses';
 
-function App() {
-  const expense = [
+function App(props) {
+  const expenses = [
     {
       title: 'Car Insurance',
       amount: 178.90,
@@ -27,29 +27,8 @@ function App() {
 
   return (
     <div>
-      <ExpenseItem
-        id={expense[0].id} 
-        title={expense[0].title}
-        amount={expense[0].amount}
-        date={expense[0].date}
-      />
-      <ExpenseItem
-        id={expense[1].id}  
-        title={expense[1].title}
-        amount={expense[1].amount}
-        date={expense[1].date}
-      />
-      <ExpenseItem
-        id={expense[2].id} 
-        title={expense[2].title}
-        amount={expense[2].amount}
-        date={expense[2].date} 
-      />
-      <ExpenseItem
-        id={expense[3].id} 
-        title={expense[3].title}
-        amount={expense[3].amount}
-        date={expense[3].date}
+      <Expenses 
+        items={expenses}
       />
     </div>
   );
