@@ -1,7 +1,8 @@
 import './index.css';
-import Expenses from './components/Expenses';
+import Expenses from './components/Expenses/Expenses';
+import React from 'react';
 
-function App(props) {
+const App = () => {
   const expenses = [
     {
       title: 'Car Insurance',
@@ -24,12 +25,13 @@ function App(props) {
       date: new Date(2022, 8, 18)
     }
   ]
-
+  // return React.createElement('div', {}, 
+  //        React.createElement('h2', {}, "Let's get Starter"),
+  //        React.createElement(Expenses, {items: expenses})
+  // );
   return (
     <div>
-      <Expenses 
-        items={expenses}
-      />
+      <Expenses items={expenses}/>
     </div>
   );
 }
